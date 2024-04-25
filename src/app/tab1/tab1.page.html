@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Examples Components
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,184 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Examples Components</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- Alert -->
+  <ion-button (click)="mostrarAlerta()">Lanzar alerta</ion-button>
+
+  <!-- Loading -->
+  <ion-button (click)="mostrarLoading()">Lanzar loading</ion-button>
+
+  <!-- Skeleton text -->
+  <ion-list *ngIf="items !== null">
+    <ion-item *ngFor="let item of items">
+      <ion-label>
+        <h3>
+          {{ item.title }}
+        </h3>
+        <p>
+          {{ item.category }}
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngIf="items === null">
+    <ion-item *ngFor="let item of [1, 2, 3, 4]">
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 60%; height: 15px;"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 40%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Segment -->
+  <!-- Simple example -->
+  <ion-segment value="ionic" scrollable>
+    <ion-segment-button value="node" layout="label-hide">
+      <ion-icon name="logo-nodejs"></ion-icon>
+      <ion-label>Node JS</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="angular" layout="label-hide">
+      <ion-icon name="logo-angular"></ion-icon>
+      <ion-label>Angular</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="react" layout="label-hide">
+      <ion-icon name="logo-react"></ion-icon>
+      <ion-label>React</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="vue" layout="label-hide">
+      <ion-icon name="logo-vue"></ion-icon>
+      <ion-label>Vue</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="ionic" layout="label-hide">
+      <ion-icon name="logo-ionic"></ion-icon>
+      <ion-label>Ionic</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="electron" layout="label-hide">
+      <ion-icon name="logo-electron"></ion-icon>
+      <ion-label>Electron</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <!-- Multiple items to do it scrollable -->
+  <ion-segment value="ionic" scrollable>
+    <ion-segment-button value="node" layout="label-hide">
+      <ion-icon name="logo-nodejs"></ion-icon>
+      <ion-label>Node JS</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="angular" layout="label-hide">
+      <ion-icon name="logo-angular"></ion-icon>
+      <ion-label>Angular</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="react" layout="label-hide">
+      <ion-icon name="logo-react"></ion-icon>
+      <ion-label>React</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="vue" layout="label-hide">
+      <ion-icon name="logo-vue"></ion-icon>
+      <ion-label>Vue</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="ionic" layout="label-hide">
+      <ion-icon name="logo-ionic"></ion-icon>
+      <ion-label>Ionic</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="electron" layout="label-hide">
+      <ion-icon name="logo-electron"></ion-icon>
+      <ion-label>Electron</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="node" layout="label-hide">
+      <ion-icon name="logo-nodejs"></ion-icon>
+      <ion-label>Node JS</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="angular" layout="label-hide">
+      <ion-icon name="logo-angular"></ion-icon>
+      <ion-label>Angular</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="react" layout="label-hide">
+      <ion-icon name="logo-react"></ion-icon>
+      <ion-label>React</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="vue" layout="label-hide">
+      <ion-icon name="logo-vue"></ion-icon>
+      <ion-label>Vue</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="ionic" layout="label-hide">
+      <ion-icon name="logo-ionic"></ion-icon>
+      <ion-label>Ionic</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="electron" layout="label-hide">
+      <ion-icon name="logo-electron"></ion-icon>
+      <ion-label>Electron</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- Badge -->
+  <ion-item>
+    <ion-badge color="dark" slot="start">101</ion-badge>
+    <ion-label>Dálmatas</ion-label>
+  </ion-item>
+
+  <!-- Chip -->
+  <ion-chip color="success">
+    <ion-icon name="pizza"></ion-icon>
+    <ion-label>Pizza</ion-label>
+  </ion-chip>
+  <ion-chip color="success">
+    <ion-icon name="nutrition"></ion-icon>
+    <ion-label>Fruta</ion-label>
+  </ion-chip>
+  
+  <!-- Input -->
+  <ion-item>
+    <ion-input 
+      label="Email" 
+      labelPlacement="floating"
+      type="email"
+      placeholder="name@example.com"
+      [clearInput]="true"
+      inputmode="email"
+      required
+    ></ion-input>
+  </ion-item>
+
+  <!-- Datetime -->
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        Date picker
+        <ion-datetime></ion-datetime>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Range (Bar) -->
+  <ion-item>
+    <ion-range min="0" max="100" step="10" pin="true" snaps="true" ticks="true">
+    <ion-label slot="start">0</ion-label>
+    <ion-label slot="end">100</ion-label>
+    </ion-range>
+  </ion-item>
+
+  <!-- FAB (Floating action button) -->
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="document"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="color-palette"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="globe"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>
