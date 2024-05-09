@@ -10,4 +10,35 @@
       <ion-title size="large">Tab 4</ion-title>
     </ion-toolbar>
   </ion-header>
+  <label appMark>This label could be marked in red</label>
+
+  <swiper-container [loop]="true" [ngStyle]="{'height': '20%'}" effect="cards">
+    <swiper-slide [ngStyle]="{'background-color': 'red'}">Slide 1</swiper-slide>
+    <swiper-slide [ngStyle]="{'background-color': 'yellow'}">Slide 2</swiper-slide>
+    <swiper-slide [ngStyle]="{'background-color': 'green'}">Slide 3</swiper-slide>
+  </swiper-container>
+
+  <swiper-container [loop]="true" [ngStyle]="{'height': '20%'}" effect="flip">
+    <swiper-slide [ngStyle]="{'background-color': 'red'}">Slide 1</swiper-slide>
+    <swiper-slide [ngStyle]="{'background-color': 'yellow'}">Slide 2</swiper-slide>
+    <swiper-slide [ngStyle]="{'background-color': 'green'}">Slide 3</swiper-slide>
+  </swiper-container>
+
+  <swiper-container [loop]="true" [ngStyle]="{'height': '20%'}" effect="cube">
+    <swiper-slide [ngStyle]="{'background-color': 'red'}">Slide 1</swiper-slide>
+    <swiper-slide [ngStyle]="{'background-color': 'yellow'}">Slide 2</swiper-slide>
+    <swiper-slide [ngStyle]="{'background-color': 'green'}">Slide 3</swiper-slide>
+  </swiper-container>
+
+  <swiper-container [loop]="true" [ngStyle]="{'height': '20%'}" effect="coverflow">
+    <swiper-slide [ngStyle]="{'background-color': 'red'}">Slide 1</swiper-slide>
+    <swiper-slide [ngStyle]="{'background-color': 'yellow'}">Slide 2</swiper-slide>
+    <swiper-slide [ngStyle]="{'background-color': 'green'}">Slide 3</swiper-slide>
+  </swiper-container>
+
+  <swiper-container [loop]="true" [ngStyle]="{'height': '20%'}" effect="fade">
+    <swiper-slide [ngStyle]="{'background-color': 'red'}">Slide 1</swiper-slide>
+    <swiper-slide [ngStyle]="{'background-color': 'yellow'}">Slide 2</swiper-slide>
+    <swiper-slide [ngStyle]="{'background-color': 'green'}">Slide 3</swiper-slide>
+  </swiper-container>
 </ion-content>

@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Rick & Morty Collection</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">characterCollection</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <app-character-list-handler [characters]="characters$ | async"></app-character-list-handler>
+  <ion-button (click)="back()">Atrás</ion-button>
+  <ion-button (click)="forward()">Adelante</ion-button>
+</ion-content>

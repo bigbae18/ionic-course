@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StoriesService } from '../services/stories.service';
+import { StoriesService } from '../../services/stories.service';
 
 @Component({
   selector: 'app-tab2',

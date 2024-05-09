@@ -13,7 +13,7 @@ const routes: Routes = [
       },
       {
         path: 'stories',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        loadChildren: () => import('./tab2/tab2.module').then(m => m.Tab2PageModule)
       },
       {
         path: 'recipes',
@@ -22,6 +22,22 @@ const routes: Routes = [
       {
         path: 'tab4',
         loadChildren: () => import('../tab4/tab4.module').then( m => m.Tab4PageModule)
+      },
+      {
+        path: 'tab5',
+        loadChildren: () => import('../tab5/tab5.module').then( m => m.Tab5PageModule)
+      },
+      {
+        path: 'character-collection',
+        loadChildren: () => import('../character-collection/character-collection.module').then( m => m.CharacterCollectionPageModule)
+      },
+      {
+        path: 'character',
+        loadChildren: () => import('../character/character.module').then( m => m.CharacterPageModule)
+      },
+      {
+        path: 'episode',
+        loadChildren: () => import('../episode/episode.module').then( m => m.EpisodePageModule)
       },
       {
         path: '',
